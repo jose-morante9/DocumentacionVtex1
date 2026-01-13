@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Store - VTEX</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="ThemeStore.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <a href="../../index.html" class="btn-back">
+                <i class="bi bi-arrow-left"></i> Volver al inicio
+            </a>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Panel de Documentación con Acordeón -->
+            <div class="documentation-panel">
+                <div class="doc-header">
+                    <h1><i class="bi bi-palette-fill"></i> Theme Store</h1>
+                    <p class="lead">Guía completa sobre Store Theme en VTEX IO</p>
+                </div>
+                
+                <div class="doc-content">
+                    <div class="accordion" id="accordionThemeStore">
+                        
+                        <!-- Acordeón 1: Qué es Store Theme -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                                    <i class="bi bi-question-circle me-3"></i> ¿Qué es Store Theme?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <div class="text-center feature-icon">
+                                        <i class="bi bi-brush-fill"></i>
+                                    </div>
+                                    
+                                    <h4 class="text-center mb-4">Store Theme define la apariencia de tu tienda</h4>
+                                    
+                                    <p><strong>Definición:</strong> Es la aplicación que controla toda la interfaz visual y estructura de tu tienda VTEX IO.</p>
+
+                                    <div class="example-card">
+                                        <h5><i class="bi bi-layers-fill text-danger"></i> Componentes principales</h5>
+                                        <ul>
+                                            <li><strong>Bloques JSON:</strong> Estructura de páginas y componentes</li>
+                                            <li><strong>Estilos CSS:</strong> Personalización visual</li>
+                                            <li><strong>Assets:</strong> Imágenes, fuentes, iconos</li>
+                                            <li><strong>Configuraciones:</strong> Comportamiento de componentes</li>
+                                        </ul>
+                                    </div>
+
+                                    <h5 class="mt-4"><i class="bi bi-diagram-3-fill text-success"></i> Arquitectura:</h5>
+                                    <div class="code-block">store-theme/<br>├── store/<br>│   ├── blocks/<br>│   │   ├── home.jsonc<br>│   │   ├── product.jsonc<br>│   │   └── search.jsonc<br>│   └── interfaces.json<br>├── styles/<br>│   ├── css/<br>│   └── configs/<br>├── assets/<br>└── manifest.json</div>
+
+                                    <div class="alert-custom">
+                                        <i class="bi bi-lightbulb-fill"></i> <strong>Concepto clave:</strong> Todo se construye con bloques JSON que VTEX renderiza como React.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Acordeón 2: Crear Store Theme -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <i class="bi bi-folder-plus me-3"></i> Cómo crear tu Store Theme
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <h4><i class="bi bi-list-ol text-danger"></i> Pasos para iniciar</h4>
+                                    
+                                    <div class="step-item">
+                                        <span class="step-number">1</span>
+                                        <strong>Clonar template base</strong>
+                                        <p class="mt-2 mb-2">Usa el template oficial de VTEX:</p>
+                                        <div class="code-block">vtex init<br>? Choose where to start: store-theme</div>
+                                        <p class="mt-2"><i class="bi bi-info-circle-fill text-primary"></i> O clona directamente:</p>
+                                        <div class="code-block">git clone https://github.com/vtex-apps/store-theme.git</div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">2</span>
+                                        <strong>Configurar manifest.json</strong>
+                                        <p class="mt-2 mb-2">Personaliza tu theme:</p>
+                                        <div class="code-block">{<br>  "vendor": "mitienda",<br>  "name": "store-theme",<br>  "version": "0.0.1",<br>  "builders": {<br>    "styles": "2.x",<br>    "store": "0.x",<br>    "assets": "0.x"<br>  },<br>  "dependencies": {<br>    "vtex.store": "2.x",<br>    "vtex.store-header": "2.x",<br>    "vtex.product-summary": "2.x",<br>    "vtex.flex-layout": "0.x",<br>    "vtex.rich-text": "0.x"<br>  }<br>}</div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">3</span>
+                                        <strong>Instalar dependencias</strong>
+                                        <div class="code-block">cd store-theme<br>vtex link</div>
+                                        <p class="mt-2"><i class="bi bi-check-circle-fill text-success"></i> Esto instala todas las apps necesarias</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">4</span>
+                                        <strong>Crear workspace de desarrollo</strong>
+                                        <div class="code-block">vtex use dev-workspace</div>
+                                        <p class="mt-2">Trabajarás en: <code>dev-workspace--tuaccount.myvtex.com</code></p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">5</span>
+                                        <strong>Ver tu tienda</strong>
+                                        <div class="code-block">vtex browse</div>
+                                        <p class="mt-2">Abre automáticamente tu tienda en el navegador</p>
+                                    </div>
+
+                                    <div class="alert-custom">
+                                        <i class="bi bi-exclamation-triangle-fill"></i> <strong>Importante:</strong> Siempre trabaja en workspace, nunca en master directamente.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Acordeón 3: Bloques JSON -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <i class="bi bi-braces me-3"></i> Trabajar con Bloques JSON
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <h4><i class="bi bi-code-square text-danger"></i> Anatomía de un bloque</h4>
+
+                                    <div class="example-card">
+                                        <h5><i class="bi bi-file-code-fill text-danger"></i> Ejemplo: Home Page</h5>
+                                        <p><strong>Archivo:</strong> <code>store/blocks/home.jsonc</code></p>
+                                        <div class="code-block">{<br>  "store.home": {<br>    "blocks": [<br>      "rich-text#banner",<br>      "flex-layout.row#products",<br>      "newsletter"<br>    ]<br>  },<br>  "rich-text#banner": {<br>    "props": {<br>      "text": "# ¡Bienvenido a mi tienda!",<br>      "blockClass": "banner-principal"<br>    }<br>  },<br>  "flex-layout.row#products": {<br>    "children": [<br>      "product-summary.shelf"<br>    ]<br>  }<br>}</div>
+                                    </div>
+
+                                    <h5 class="mt-4"><i class="bi bi-puzzle-fill text-primary"></i> Bloques más usados:</h5>
+                                    <ul>
+                                        <li><strong>flex-layout:</strong> Diseño responsive (filas y columnas)</li>
+                                        <li><strong>rich-text:</strong> Textos con markdown</li>
+                                        <li><strong>image:</strong> Imágenes optimizadas</li>
+                                        <li><strong>product-summary:</strong> Cards de productos</li>
+                                        <li><strong>search-result:</strong> Resultados de búsqueda</li>
+                                        <li><strong>slider-layout:</strong> Carruseles</li>
+                                    </ul>
+
+                                    <div class="example-card">
+                                        <h5><i class="bi bi-grid-3x3-gap-fill text-danger"></i> Ejemplo: Grid de productos</h5>
+                                        <div class="code-block">{<br>  "flex-layout.row#shelf": {<br>    "children": ["list-context.product-list#demo"]<br>  },<br>  "list-context.product-list#demo": {<br>    "blocks": ["product-summary.shelf"],<br>    "children": ["slider-layout#products"]<br>  },<br>  "slider-layout#products": {<br>    "props": {<br>      "itemsPerPage": {<br>        "desktop": 4,<br>        "tablet": 3,<br>        "phone": 2<br>      },<br>      "infinite": true,<br>      "showNavigationArrows": "desktopOnly",<br>      "blockClass": "carousel"<br>    }<br>  }<br>}</div>
+                                    </div>
+
+                                    <div class="alert-custom">
+                                        <i class="bi bi-lightbulb-fill"></i> <strong>Tip:</strong> Usa <code>blockClass</code> para aplicar estilos CSS personalizados.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Acordeón 4: Estilos CSS -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    <i class="bi bi-paint-bucket me-3"></i> Personalizar estilos
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <h4><i class="bi bi-palette text-danger"></i> Sistema de estilos en VTEX</h4>
+
+                                    <div class="step-item">
+                                        <span class="step-number">1</span>
+                                        <strong>Configuración de colores</strong>
+                                        <p class="mt-2 mb-2">Archivo: <code>styles/configs/style.json</code></p>
+                                        <div class="code-block">{<br>  "semanticColors": {<br>    "primary": "#F71963",<br>    "secondary": "#142032",<br>    "success": "#28a745",<br>    "danger": "#dc3545",<br>    "warning": "#ffc107",<br>    "muted": "#727273"<br>  },<br>  "borderRadius": "8px",<br>  "fontFamily": "Segoe UI, sans-serif"<br>}</div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">2</span>
+                                        <strong>CSS personalizado</strong>
+                                        <p class="mt-2 mb-2">Archivo: <code>styles/css/vtex.flex-layout.css</code></p>
+                                        <div class="code-block">/* Usando blockClass del JSON */<br>.flexRowContent--banner-principal {<br>  background: linear-gradient(135deg, #F71963, #142032);<br>  padding: 60px 0;<br>  border-radius: 10px;<br>}<br><br>.flexRow--carousel {<br>  margin: 40px 0;<br>}<br><br>.flexCol--product-card {<br>  transition: transform 0.3s;<br>}<br><br>.flexCol--product-card:hover {<br>  transform: translateY(-10px);<br>}</div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">3</span>
+                                        <strong>Overrides de componentes</strong>
+                                        <p class="mt-2 mb-2">Archivo: <code>styles/css/vtex.product-summary.css</code></p>
+                                        <div class="code-block">.productBrand {<br>  font-size: 14px;<br>  color: #727273;<br>  text-transform: uppercase;<br>}<br><br>.priceContainer {<br>  color: #F71963;<br>  font-weight: bold;<br>  font-size: 24px;<br>}<br><br>.listPrice {<br>  text-decoration: line-through;<br>  color: #999;<br>}</div>
+                                    </div>
+
+                                    <div class="example-card">
+                                        <h5><i class="bi bi-stars text-danger"></i> Jerarquía de estilos</h5>
+                                        <ol>
+                                            <li><strong>style.json:</strong> Variables globales</li>
+                                            <li><strong>vtex.[app].css:</strong> Estilos por app</li>
+                                            <li><strong>blockClass:</strong> Clases específicas</li>
+                                            <li><strong>CSS handles:</strong> Clases nativas de VTEX</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="alert-custom">
+                                        <i class="bi bi-info-circle-fill"></i> <strong>Nota:</strong> Los cambios de CSS requieren refresh del navegador (Ctrl + Shift + R).
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Acordeón 5: Templates de páginas -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                    <i class="bi bi-file-earmark-richtext me-3"></i> Templates de páginas
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <h4><i class="bi bi-grid-1x2 text-danger"></i> Páginas principales</h4>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5><i class="bi bi-house-door-fill" style="color: #F71963;"></i> Home</h5>
+                                                    <p><code>store.home</code></p>
+                                                    <small>Página principal de la tienda</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5><i class="bi bi-box-seam-fill" style="color: #142032;"></i> Product</h5>
+                                                    <p><code>store.product</code></p>
+                                                    <small>Página de detalles del producto</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5><i class="bi bi-search" style="color: #28a745;"></i> Search</h5>
+                                                    <p><code>store.search</code></p>
+                                                    <small>Resultados de búsqueda</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5><i class="bi bi-cart-fill" style="color: #ffc107;"></i> Cart</h5>
+                                                    <p><code>store.cart</code></p>
+                                                    <small>Carrito de compras</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="example-card mt-3">
+                                        <h5><i class="bi bi-file-code-fill text-danger"></i> Ejemplo: Página de producto</h5>
+                                        <p><strong>Archivo:</strong> <code>store/blocks/product.jsonc</code></p>
+                                        <div class="code-block">{<br>  "store.product": {<br>    "children": [<br>      "flex-layout.row#product-main"<br>    ]<br>  },<br>  "flex-layout.row#product-main": {<br>    "children": [<br>      "flex-layout.col#product-images",<br>      "flex-layout.col#product-info"<br>    ]<br>  },<br>  "flex-layout.col#product-images": {<br>    "children": [<br>      "product-images"<br>    ]<br>  },<br>  "flex-layout.col#product-info": {<br>    "children": [<br>      "product-name",<br>      "product-price",<br>      "sku-selector",<br>      "add-to-cart-button",<br>      "shipping-simulator"<br>    ]<br>  }<br>}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Acordeón 6: Comandos útiles -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                                    <i class="bi bi-terminal me-3"></i> Comandos útiles
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <h4><i class="bi bi-code-slash text-danger"></i> Comandos principales</h4>
+
+                                    <div class="step-item">
+                                        <strong><i class="bi bi-play-fill"></i> Link (desarrollo)</strong>
+                                        <div class="code-block">vtex link</div>
+                                        <p class="text-muted mt-2">Hot reload automático en tiempo real</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <strong><i class="bi bi-eye-fill"></i> Abrir tienda</strong>
+                                        <div class="code-block">vtex browse</div>
+                                        <p class="text-muted mt-2">Abre tu workspace en el navegador</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <strong><i class="bi bi-box-arrow-up"></i> Publicar</strong>
+                                        <div class="code-block">vtex publish</div>
+                                        <p class="text-muted mt-2">Publica una nueva versión</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <strong><i class="bi bi-check-circle-fill"></i> Promover a producción</strong>
+                                        <div class="code-block">vtex workspace promote</div>
+                                        <p class="text-muted mt-2">Lleva tu workspace a master</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <strong><i class="bi bi-list-ul"></i> Ver apps instaladas</strong>
+                                        <div class="code-block">vtex list</div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <strong><i class="bi bi-arrow-clockwise"></i> Reinstalar dependencias</strong>
+                                        <div class="code-block">vtex deps update</div>
+                                    </div>
+
+                                    <div class="alert-custom">
+                                        <i class="bi bi-exclamation-triangle-fill"></i> <strong>Importante:</strong> Siempre prueba en workspace antes de promover a master.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel de Preview -->
+            <div class="preview-panel">
+                <div class="preview-header">
+                    <h3><i class="bi bi-image"></i> Vista Previa</h3>
+                </div>
+                <div class="preview-content">
+                    <svg class="preview-image" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Ventana navegador -->
+                        <rect x="80" y="60" width="440" height="280" rx="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+                        <rect x="80" y="60" width="440" height="30" rx="8" fill="#f0f0f0"/>
+                        <circle cx="100" cy="75" r="5" fill="#ff5f57"/>
+                        <circle cx="120" cy="75" r="5" fill="#ffbd2e"/>
+                        <circle cx="140" cy="75" r="5" fill="#28ca42"/>
+                        
+                        <!-- Header -->
+                        <rect x="80" y="90" width="440" height="40" fill="#142032"/>
+                        <text x="300" y="115" font-family="Arial" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">MI TIENDA VTEX</text>
+                        
+                        <!-- Banner -->
+                        <rect x="100" y="140" width="400" height="80" rx="8" fill="url(#grad1)"/>
+                        <text x="300" y="185" font-family="Arial" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="bold">¡Grandes ofertas!</text>
+                        
+                        <!-- Products -->
+                        <rect x="100" y="235" width="90" height="90" rx="5" fill="#f8f9fa" stroke="#F71963" stroke-width="2"/>
+                        <rect x="210" y="235" width="90" height="90" rx="5" fill="#f8f9fa" stroke="#F71963" stroke-width="2"/>
+                        <rect x="320" y="235" width="90" height="90" rx="5" fill="#f8f9fa" stroke="#F71963" stroke-width="2"/>
+                        <rect x="430" y="235" width="90" height="90" rx="5" fill="#f8f9fa" stroke="#F71963" stroke-width="2"/>
+                        
+                        <!-- Gradient definition -->
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#F71963;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#142032;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script src="ThemeStore.js"></script>
+</body>
+</html>

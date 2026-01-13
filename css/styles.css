@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #142032 0%, #F71963 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    width: 100%;
+    padding: 50px;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #F71963;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: slideInLeft 1s ease-out 0.3s both;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.subtitle {
+    text-align: center;
+    color: #727273;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-out 0.6s both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.student-illustration {
+    text-align: center;
+    margin: 40px 0;
+    animation: bounceIn 1s ease-out 0.9s both;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.student-svg {
+    width: 200px;
+    height: 200px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.description {
+    text-align: center;
+    color: #142032;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    animation: fadeIn 1s ease-out 1.2s both;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: slideInUp 1s ease-out 1.5s both;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-2px);
+}
+
+.btn-interface {
+    background: linear-gradient(135deg, #F71963 0%, #FF4081 100%);
+}
+
+.btn-theme {
+    background: linear-gradient(135deg, #142032 0%, #2C3E50 100%);
+}
+
+.btn-edition {
+    background: linear-gradient(135deg, #F71963 0%, #142032 100%);
+}
+
+.btn-icon {
+    margin-right: 15px;
+    font-size: 1.5em;
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    .container {
+        padding: 40px;
+        max-width: 700px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .subtitle {
+        font-size: 1.1em;
+    }
+
+    .student-svg {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* Móviles grandes */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 30px 25px;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .subtitle {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .student-svg {
+        width: 150px;
+        height: 150px;
+    }
+
+    .student-illustration {
+        margin: 30px 0;
+    }
+
+    .description {
+        font-size: 1em;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    .btn {
+        font-size: 1em;
+        padding: 15px 20px;
+    }
+
+    .btn-icon {
+        font-size: 1.3em;
+        margin-right: 10px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 0.9em;
+        margin-bottom: 25px;
+    }
+
+    .student-svg {
+        width: 120px;
+        height: 120px;
+    }
+
+    .student-illustration {
+        margin: 25px 0;
+    }
+
+    .description {
+        font-size: 0.95em;
+        margin-bottom: 25px;
+    }
+
+    .buttons-container {
+        gap: 15px;
+    }
+
+    .btn {
+        font-size: 0.95em;
+        padding: 15px;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .btn-icon {
+        font-size: 1.2em;
+        margin-right: 8px;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 360px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    .subtitle {
+        font-size: 0.85em;
+    }
+
+    .student-svg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .description {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        font-size: 0.9em;
+        padding: 12px;
+    }
+}

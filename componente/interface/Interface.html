@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Admin - VTEX</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="Interface.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <a href="../../index.html" class="btn-back">
+                <i class="bi bi-arrow-left"></i> Volver al inicio
+            </a>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Panel de Documentación con Acordeón -->
+            <div class="documentation-panel">
+                <div class="doc-header">
+                    <h1><i class="bi bi-speedometer2"></i> Interface Admin VTEX</h1>
+                    <p class="lead">Guía completa del panel administrativo</p>
+                </div>
+                
+                <div class="doc-content">
+                    <div class="accordion" id="accordionInterface">
+                        
+                        <!-- Acordeón 1: Acceder al Admin -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                                    <i class="bi bi-box-arrow-in-right me-3"></i> Cómo acceder al Admin
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+                                    <h4><i class="bi bi-key text-danger"></i> Acceso al panel administrativo</h4>
+                                    
+                                    <div class="step-item">
+                                        <span class="step-number">1</span>
+                                        <strong>URL del Admin</strong>
+                                        <p class="mt-2 mb-2">Accede desde tu navegador:</p>
+                                        <div class="code-block">https://{nombre-cuenta}.myvtex.com/admin</div>
+                                        <p class="mt-2"><i class="bi bi-info-circle-fill text-primary"></i> Reemplaza <code>{nombre-cuenta}</code> con tu account name</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">2</span>
+                                        <strong>Credenciales</strong>
+                                        <p class="mt-2">Usa tu email y contraseña de VTEX</p>
+                                        <div class="alert-custom">
+                                            <i class="bi bi-shield-check"></i> Asegúrate de tener permisos de administrador
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">3</span>
+                                        <strong>Autenticación de dos factores</strong>
+                                        <p class="mt-2 mb-2">Si está activada, recibirás un código por:</p>
+                                        <ul>
+                                            <li>📧 Email</li>
+                                            <li>📱 SMS</li>
+                                            <li>🔐 App autenticador (Google Authenticator, Authy)</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="example-card">
+                                        <h5><i class="bi bi-person-badge text-danger"></i> Roles de usuario</h5>
+                                        <ul>
+                                            <li><strong>Owner:</strong> Acceso total</li>
+                                            <li><strong>Admin:</strong> Gestión completa (sin billing)</li>
+                                            <li><strong>Developer:</strong> Apps y configuraciones técnicas</li>
+                                            <li><strong>Operator:</strong> Operaciones y pedidos</li>
+                                            <li><strong>Viewer:</strong> Solo lectura</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="alert-custom">
+                                        <i class="bi bi-lightbulb-fill"></i> <strong>Tip:</strong> Guarda el Admin en favoritos para acceso rápido.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Acordeón 2: Dashboard Principal -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <i class="bi bi-grid-3x3-gap me-3"></i> Dashboard y navegación
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <h4><i class="bi bi-layout-text-sidebar text-danger"></i> Menú principal</h4>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5><i class="bi bi-house-door" style="color: #F71963;"></i> Inicio</h5>
+                                                    <p>Dashboard con métricas principales</p>
+                                                    <ul>
+                                                        <li>Ventas del día</li>
+                                                        <li>Pedidos pendientes</li>
+                                                        <li>Productos sin stock</li>
+                                                        <li>Alertas importantes</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5><i class="bi bi-clipboard-check" style="color: #142032;"></i> Pedidos</h5>
+                                                    <p>Gestión de órdenes</p>
+                                                    <ul>
+                                                        <li>Ver todos los pedidos</li>
+                                                        <li>Filtrar por estado</li>
+                                                        <li>Gestionar devoluciones</li>
+                                                        <li>Seguimiento de envíos</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5><i class="bi bi-box-seam" style="color: #28a745;"></i> Productos</h5>
+                                                    <p>Catálogo de productos</p>
+                                                    <ul>
+                                                        <li>Crear/editar productos</li>
+                                                        <li>Gestionar SKUs</li>
+                                                        <li>Categorías y marcas</li>
+                                                        <li>Especificaciones</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card h-100">
+                                                <div class="card-body">
+                                                    <h5><i class="bi bi-tag" style="color: #ffc107;"></i> Precios</h5>
+                                                    <p>Gestión de precios</p>
+                                                    <ul>
+                                                        <li>Precios base</li>
+                                                        <li>Listas de precios</li>
+                                                        <li>Tablas de precios</li>
+                                                        <li>Reglas de pricing</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="example-card">
+                                        <h5><i class="bi bi-search text-danger"></i> Búsqueda rápida</h5>
+                                        <p>Usa el buscador superior para encontrar:</p>
+                                        <ul>
+                                            <li><strong>Pedidos:</strong> Por ID o email del cliente</li>
+                                            <li><strong>Productos:</strong> Por nombre o ID</li>
+                                            <li><strong>Clientes:</strong> Por email o documento</li>
+                                            <li><strong>Configuraciones:</strong> Por nombre de sección</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Acordeón 3: Gestión de Productos -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <i class="bi bi-box me-3"></i> Gestión de productos
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <h4><i class="bi bi-plus-circle text-danger"></i> Crear un producto nuevo</h4>
+                                    
+                                    <div class="step-item">
+                                        <span class="step-number">1</span>
+                                        <strong>Ir a Catálogo > Productos y SKUs</strong>
+                                        <div class="code-block">Admin > Catálogo > Productos y SKUs > Agregar Producto</div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">2</span>
+                                        <strong>Información básica del producto</strong>
+                                        <ul>
+                                            <li><strong>Nombre:</strong> Nombre visible del producto (ej: "Zapatillas Running Pro")</li>
+                                            <li><strong>Palabras sustitutas:</strong> Sinónimos para búsqueda</li>
+                                            <li><strong>Ref ID:</strong> Código de referencia interno único</li>
+                                            <li><strong>Texto de link:</strong> URL amigable (ej: zapatillas-running-pro)</li>
+                                        </ul>
+                                    </div>
+
+                                    <h4 class="mt-4"><i class="bi bi-bookmark-star text-danger"></i> Crear y asignar Marca</h4>
+
+                                    <div class="step-item">
+                                        <span class="step-number">1</span>
+                                        <strong>Crear nueva marca (si no existe)</strong>
+                                        <div class="code-block">Admin > Catálogo > Marcas > Nueva Marca</div>
+                                        <p class="mt-2">Completa los campos:</p>
+                                        <ul>
+                                            <li><strong>Nombre:</strong> Nike, Adidas, Samsung, etc.</li>
+                                            <li><strong>Palabras sustitutas:</strong> Variaciones del nombre</li>
+                                            <li><strong>Título de la página:</strong> Para SEO</li>
+                                            <li><strong>Meta Tags:</strong> Descripción y keywords</li>
+                                            <li><strong>Activo:</strong> Marca el checkbox para activar</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">2</span>
+                                        <strong>Asignar marca al producto</strong>
+                                        <p class="mt-2">En el formulario de producto:</p>
+                                        <ul>
+                                            <li>Busca el campo <strong>"Marca"</strong></li>
+                                            <li>Selecciona de la lista desplegable</li>
+                                            <li>Si no aparece, créala primero (paso anterior)</li>
+                                            <li>Solo se puede asignar UNA marca por producto</li>
+                                        </ul>
+                                    </div>
+
+                                    <h4 class="mt-4"><i class="bi bi-folder-fill text-danger"></i> Crear y asignar Categoría</h4>
+
+                                    <div class="step-item">
+                                        <span class="step-number">1</span>
+                                        <strong>Crear árbol de categorías</strong>
+                                        <div class="code-block">Admin > Catálogo > Categorías > Nueva Categoría</div>
+                                        <p class="mt-2"><strong>Estructura jerárquica:</strong></p>
+                                        <div class="example-card">
+                                            <p>📁 Deportes (Nivel 1 - Departamento)</p>
+                                            <p style="margin-left: 20px;">📁 Calzado (Nivel 2 - Categoría)</p>
+                                            <p style="margin-left: 40px;">📁 Running (Nivel 3 - Subcategoría)</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">2</span>
+                                        <strong>Configurar cada categoría</strong>
+                                        <ul>
+                                            <li><strong>Nombre:</strong> Nombre visible</li>
+                                            <li><strong>Categoría Padre:</strong> Ninguna si es nivel 1, o selecciona padre</li>
+                                            <li><strong>Palabras sustitutas:</strong> Sinónimos</li>
+                                            <li><strong>Título de página:</strong> Para SEO</li>
+                                            <li><strong>Meta descripción:</strong> Para buscadores</li>
+                                            <li><strong>Activo:</strong> Marca para activar</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">3</span>
+                                        <strong>Asignar categoría al producto</strong>
+                                        <p class="mt-2">En el formulario de producto:</p>
+                                        <ul>
+                                            <li>Busca el campo <strong>"Categoría"</strong></li>
+                                            <li>Navega por el árbol de categorías</li>
+                                            <li>Selecciona la categoría más específica</li>
+                                            <li>Puedes asignar múltiples categorías si aplica</li>
+                                        </ul>
+                                    </div>
+
+                                    <h4 class="mt-4"><i class="bi bi-link-45deg text-danger"></i> Productos similares / relacionados</h4>
+
+                                    <div class="step-item">
+                                        <span class="step-number">1</span>
+                                        <strong>Configurar productos similares</strong>
+                                        <p class="mt-2">Después de guardar el producto:</p>
+                                        <div class="code-block">Catálogo > Productos y SKUs > Buscar producto > Tab "Similares"</div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">2</span>
+                                        <strong>Agregar relaciones</strong>
+                                        <ul>
+                                            <li>Haz clic en <strong>"Nuevo Similar"</strong></li>
+                                            <li>Busca el producto por nombre o ID</li>
+                                            <li>Selecciona el tipo de relación:
+                                                <ul>
+                                                    <li><strong>Similar:</strong> Productos parecidos</li>
+                                                    <li><strong>Sugerencia:</strong> Complementarios</li>
+                                                    <li><strong>Accesorio:</strong> Accesorios del producto</li>
+                                                </ul>
+                                            </li>
+                                            <li>Guarda la relación</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">3</span>
+                                        <strong>Configuración automática (opcional)</strong>
+                                        <p class="mt-2">VTEX puede sugerir automáticamente productos similares basado en:</p>
+                                        <ul>
+                                            <li>Misma categoría</li>
+                                            <li>Misma marca</li>
+                                            <li>Especificaciones similares</li>
+                                            <li>Historial de compras</li>
+                                        </ul>
+                                        <div class="code-block">Admin > Storefront > Layout > CMS > Configura el shelf de similares</div>
+                                    </div>
+
+                                    <h4 class="mt-4"><i class="bi bi-images text-danger"></i> Imágenes del producto</h4>
+
+                                    <div class="step-item">
+                                        <span class="step-number">1</span>
+                                        <strong>Subir imágenes</strong>
+                                        <p class="mt-2">Formatos y especificaciones:</p>
+                                        <ul>
+                                            <li><strong>Formato:</strong> JPG, PNG (recomendado PNG para transparencia)</li>
+                                            <li><strong>Tamaño:</strong> Mínimo 1000x1000px, ideal 2000x2000px</li>
+                                            <li><strong>Peso:</strong> Máximo 3MB por imagen</li>
+                                            <li><strong>Cantidad:</strong> 3-10 imágenes por producto</li>
+                                            <li><strong>Vistas:</strong> Frontal, lateral, detalle, uso</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="example-card">
+                                        <h5><i class="bi bi-lightning-fill text-danger"></i> Producto vs SKU</h5>
+                                        <p><strong>Producto:</strong> Entidad general (ej: "Camiseta deportiva")</p>
+                                        <p><strong>SKU:</strong> Variante específica (ej: "Camiseta deportiva roja talla M")</p>
+                                        <p class="mb-0">Un producto puede tener múltiples SKUs (uno por cada combinación de variaciones)</p>
+                                    </div>
+
+                                    <div class="example-card mt-3">
+                                        <h5><i class="bi bi-diagram-3 text-danger"></i> Ejemplo completo</h5>
+                                        <p><strong>Producto:</strong> Zapatillas Running Pro</p>
+                                        <p><strong>Marca:</strong> Nike</p>
+                                        <p><strong>Categoría:</strong> Deportes > Calzado > Running</p>
+                                        <p><strong>SKUs:</strong></p>
+                                        <ul>
+                                            <li>Zapatillas Running Pro - Negro - 39</li>
+                                            <li>Zapatillas Running Pro - Negro - 40</li>
+                                            <li>Zapatillas Running Pro - Blanco - 39</li>
+                                            <li>Zapatillas Running Pro - Blanco - 40</li>
+                                        </ul>
+                                        <p><strong>Similares:</strong> Zapatillas Trail, Zapatillas Training</p>
+                                        <p class="mb-0"><strong>Accesorios:</strong> Plantillas ortopédicas, Medias deportivas</p>
+                                    </div>
+
+                                    <div class="alert-custom">
+                                        <i class="bi bi-info-circle-fill"></i> <strong>Importante:</strong> El producto debe estar activo, tener precio, stock disponible y al menos una imagen para aparecer en la tienda.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Acordeón 4: Gestión de Pedidos -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    <i class="bi bi-cart-check me-3"></i> Gestión de pedidos
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <h4><i class="bi bi-list-check text-danger"></i> Estados de pedidos</h4>
+
+                                    <div class="step-item">
+                                        <strong><i class="bi bi-hourglass-split"></i> Pendiente de pago</strong>
+                                        <p class="mt-2">Pedido creado, esperando confirmación de pago</p>
+                                        <ul>
+                                            <li>Verificar método de pago</li>
+                                            <li>Esperar notificación del gateway</li>
+                                            <li>Cancelar si no se confirma en 48h</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <strong><i class="bi bi-check-circle"></i> Pago aprobado</strong>
+                                        <p class="mt-2">Listo para procesamiento</p>
+                                        <ul>
+                                            <li>Verificar stock disponible</li>
+                                            <li>Asignar a centro de distribución</li>
+                                            <li>Generar factura</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <strong><i class="bi bi-box-seam"></i> En preparación</strong>
+                                        <p class="mt-2">Almacén procesando el pedido</p>
+                                        <ul>
+                                            <li>Picking de productos</li>
+                                            <li>Empaquetado</li>
+                                            <li>Etiquetado para envío</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <strong><i class="bi bi-truck"></i> Facturado / En tránsito</strong>
+                                        <p class="mt-2">Pedido enviado al cliente</p>
+                                        <ul>
+                                            <li>Tracking activo</li>
+                                            <li>Notificaciones automáticas</li>
+                                            <li>Actualizar estado de envío</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <strong><i class="bi bi-check-all"></i> Entregado</strong>
+                                        <p class="mt-2">Cliente recibió el pedido</p>
+                                    </div>
+
+                                    <div class="example-card">
+                                        <h5><i class="bi bi-arrow-repeat text-danger"></i> Acciones comunes</h5>
+                                        <ul>
+                                            <li><strong>Cambiar dirección:</strong> Antes de facturar</li>
+                                            <li><strong>Cancelar pedido:</strong> Reembolso automático si pagó</li>
+                                            <li><strong>Reenviar factura:</strong> Email al cliente</li>
+                                            <li><strong>Agregar tracking:</strong> Código de rastreo</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="alert-custom">
+                                        <i class="bi bi-exclamation-triangle-fill"></i> <strong>Nota:</strong> Los cambios de estado generan emails automáticos al cliente.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Acordeón 5: Promociones y Descuentos -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                    <i class="bi bi-percent me-3"></i> Promociones y descuentos
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <h4><i class="bi bi-gift text-danger"></i> Crear una promoción</h4>
+                                    
+                                    <div class="step-item">
+                                        <span class="step-number">1</span>
+                                        <strong>Ir a Promociones</strong>
+                                        <div class="code-block">Admin > Tasas y Promociones > Promociones > Nueva Promoción</div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">2</span>
+                                        <strong>Tipos de promoción</strong>
+                                        <div class="row mt-3">
+                                            <div class="col-md-6 mb-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>💰 Regular</h6>
+                                                        <p class="mb-0">Descuento en productos o categorías</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>🎁 Compre y Gane</h6>
+                                                        <p class="mb-0">Lleva X paga Y, o regalo gratis</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>📦 Envío Gratis</h6>
+                                                        <p class="mb-0">Sin costo de envío</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-2">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h6>🏷️ Cupón</h6>
+                                                        <p class="mb-0">Código promocional</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">3</span>
+                                        <strong>Configurar condiciones</strong>
+                                        <ul>
+                                            <li><strong>Fecha inicio/fin:</strong> Período de validez</li>
+                                            <li><strong>Productos:</strong> Aplicable a qué ítems</li>
+                                            <li><strong>Categorías:</strong> Por sección de tienda</li>
+                                            <li><strong>Valor mínimo:</strong> Compra mínima requerida</li>
+                                            <li><strong>Primer pedido:</strong> Solo clientes nuevos</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="example-card">
+                                        <h5><i class="bi bi-code-square text-danger"></i> Ejemplo: Black Friday</h5>
+                                        <div class="code-block">Nombre: Black Friday 2026<br>Tipo: Regular<br>Descuento: 30% OFF<br>Válido: 24/11/2026 - 26/11/2026<br>Categorías: Todas<br>Valor mínimo: $50<br>Cupón: BLACKFRIDAY30</div>
+                                    </div>
+
+                                    <div class="alert-custom">
+                                        <i class="bi bi-lightbulb-fill"></i> <strong>Tip:</strong> Las promociones se aplican automáticamente en el checkout según prioridad.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Acordeón 6: Configuraciones importantes -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                                    <i class="bi bi-gear me-3"></i> Configuraciones importantes
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <h4><i class="bi bi-sliders text-danger"></i> Ajustes principales</h4>
+
+                                    <div class="step-item">
+                                        <strong><i class="bi bi-credit-card"></i> Medios de pago</strong>
+                                        <p class="mt-2"><code>Admin > Pagos > Configuraciones > Condiciones de pago</code></p>
+                                        <ul>
+                                            <li>Tarjetas de crédito/débito</li>
+                                            <li>PayPal, Mercado Pago</li>
+                                            <li>PIX, transferencia bancaria</li>
+                                            <li>Efectivo contra entrega</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <strong><i class="bi bi-truck"></i> Logística y envíos</strong>
+                                        <p class="mt-2"><code>Admin > Envío > Estrategia de envío</code></p>
+                                        <ul>
+                                            <li>Políticas de envío</li>
+                                            <li>Transportadoras</li>
+                                            <li>Puntos de recogida</li>
+                                            <li>Cálculo de flete</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <strong><i class="bi bi-shop"></i> Configuración de tienda</strong>
+                                        <p class="mt-2"><code>Admin > Configuración de la cuenta > Cuenta</code></p>
+                                        <ul>
+                                            <li>Nombre de la tienda</li>
+                                            <li>Logo y favicon</li>
+                                            <li>Datos fiscales</li>
+                                            <li>Políticas de privacidad</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <strong><i class="bi bi-envelope"></i> Emails transaccionales</strong>
+                                        <p class="mt-2"><code>Admin > Centro de mensajes > Templates</code></p>
+                                        <ul>
+                                            <li>Confirmación de pedido</li>
+                                            <li>Factura emitida</li>
+                                            <li>Pedido enviado</li>
+                                            <li>Pedido entregado</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <strong><i class="bi bi-people"></i> Gestión de usuarios</strong>
+                                        <p class="mt-2"><code>Admin > Configuración de la cuenta > Usuarios</code></p>
+                                        <ul>
+                                            <li>Agregar usuarios</li>
+                                            <li>Asignar roles</li>
+                                            <li>Permisos específicos</li>
+                                            <li>Autenticación 2FA</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="example-card">
+                                        <h5><i class="bi bi-clipboard-check text-danger"></i> Checklist inicial</h5>
+                                        <ol>
+                                            <li>✅ Configurar medios de pago</li>
+                                            <li>✅ Establecer logística de envío</li>
+                                            <li>✅ Personalizar emails</li>
+                                            <li>✅ Agregar productos al catálogo</li>
+                                            <li>✅ Configurar políticas de la tienda</li>
+                                            <li>✅ Probar flujo de compra completo</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="alert-custom">
+                                        <i class="bi bi-exclamation-triangle-fill"></i> <strong>Importante:</strong> Prueba todo en un ambiente de staging antes de ir a producción.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel de Preview -->
+            <div class="preview-panel">
+                <div class="preview-header">
+                    <h3><i class="bi bi-image"></i> Vista Previa</h3>
+                </div>
+                <div class="preview-content">
+                    <svg class="preview-image" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Dashboard Admin -->
+                        <rect x="50" y="40" width="500" height="320" rx="10" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+                        
+                        <!-- Header -->
+                        <rect x="50" y="40" width="500" height="50" rx="10" fill="#142032"/>
+                        <text x="80" y="70" font-family="Arial" font-size="20" fill="#ffffff" font-weight="bold">VTEX Admin</text>
+                        <circle cx="510" cy="65" r="15" fill="#F71963"/>
+                        
+                        <!-- Sidebar -->
+                        <rect x="50" y="90" width="120" height="270" fill="#f8f9fa"/>
+                        <rect x="60" y="105" width="100" height="30" rx="5" fill="#F71963"/>
+                        <text x="110" y="125" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">Dashboard</text>
+                        
+                        <text x="70" y="155" font-family="Arial" font-size="11" fill="#727273">📦 Pedidos</text>
+                        <text x="70" y="180" font-family="Arial" font-size="11" fill="#727273">📊 Productos</text>
+                        <text x="70" y="205" font-family="Arial" font-size="11" fill="#727273">💰 Precios</text>
+                        <text x="70" y="230" font-family="Arial" font-size="11" fill="#727273">🎁 Promociones</text>
+                        
+                        <!-- Main content -->
+                        <rect x="180" y="100" width="360" height="250" fill="#ffffff"/>
+                        <text x="360" y="125" font-family="Arial" font-size="16" fill="#142032" text-anchor="middle" font-weight="bold">Dashboard Principal</text>
+                        
+                        <!-- Cards -->
+                        <rect x="190" y="140" width="160" height="80" rx="8" fill="#fff5f8" stroke="#F71963" stroke-width="2"/>
+                        <text x="270" y="165" font-family="Arial" font-size="12" fill="#727273" text-anchor="middle">Ventas Hoy</text>
+                        <text x="270" y="195" font-family="Arial" font-size="24" fill="#F71963" text-anchor="middle" font-weight="bold">$12,450</text>
+                        
+                        <rect x="370" y="140" width="160" height="80" rx="8" fill="#f0f8ff" stroke="#142032" stroke-width="2"/>
+                        <text x="450" y="165" font-family="Arial" font-size="12" fill="#727273" text-anchor="middle">Pedidos</text>
+                        <text x="450" y="195" font-family="Arial" font-size="24" fill="#142032" text-anchor="middle" font-weight="bold">87</text>
+                        
+                        <!-- Chart area -->
+                        <rect x="190" y="240" width="340" height="100" rx="5" fill="#f8f9fa"/>
+                        <text x="360" y="260" font-family="Arial" font-size="11" fill="#727273" text-anchor="middle">Gráfico de ventas</text>
+                        <polyline points="200,320 250,290 300,310 350,270 400,285 450,260 510,280" stroke="#F71963" stroke-width="3" fill="none"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script src="Interface.js"></script>
+</body>
+</html>
