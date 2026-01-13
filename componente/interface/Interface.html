@@ -588,6 +588,597 @@
                             </div>
                         </div>
 
+                        <!-- Acordeón 7: Tutorial Categorías Detallado -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                                    <i class="bi bi-folder-symlink me-3"></i> 📚 Tutorial: Categorías paso a paso
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <h4><i class="bi bi-play-circle text-danger"></i> Tutorial completo de Categorías</h4>
+                                    
+                                    <div class="step-item">
+                                        <span class="step-number">1</span>
+                                        <strong>Acceder al módulo de Categorías</strong>
+                                        <div class="code-block">Admin > Catálogo > Categorías</div>
+                                        <p class="mt-2">En la vista verás todas las categorías existentes en formato lista</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">2</span>
+                                        <strong>Crear una nueva categoría</strong>
+                                        <p class="mt-2">Haz clic en <strong>"+Categoría"</strong> o <strong>"Actions"</strong> y selecciona <strong>"Include"</strong></p>
+                                        <div class="example-card mt-3">
+                                            <h5><i class="bi bi-gear-fill text-danger"></i> TAGEGORIES ACTIONS - Opciones disponibles:</h5>
+                                            <ul>
+                                                <li><strong>✏️ Edit (Editar):</strong> Modifica la categoría (nombre, descripción, palabras similares, etc.)</li>
+                                                <li><strong>📁 Include (Incluir):</strong> Agrega una subcategoría dentro de la categoría actual</li>
+                                                <li><strong>👥 Group (Grupo):</strong> Crea un grupo para organizar categorías o filtros</li>
+                                                <li><strong>🏷️ Field [Product] (Campo):</strong> Agrega campos específicos para productos</li>
+                                                <li><strong>📦 Field [SKU] (Campo SKU):</strong> Agrega campos específicos para SKUs</li>
+                                                <li><strong>💰 Price range (Rango de precio):</strong> Configura filtros por rango de precio</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">3</span>
+                                        <strong>Formulario de creación de categoría</strong>
+                                        <p class="mt-2"><strong>Campos obligatorios (*)</strong></p>
+                                        
+                                        <h6 class="mt-3">📝 Name (Nombre) *</h6>
+                                        <p>Título de la categoría (ej: "Deportes", "Calzado", "Running")</p>
+                                        
+                                        <h6 class="mt-3">🔤 Similar words (Palabras similares)</h6>
+                                        <p>Sinónimos o variaciones del nombre. Ejemplos:</p>
+                                        <div class="code-block">Electronic -> Electronics<br>Fridge -> Refrigerator<br>Calvin Klein -> Calvin Klaen</div>
+                                        <p class="mt-2"><em>Importante: Se usan para búsquedas internas y SEO</em></p>
+                                        
+                                        <h6 class="mt-3">🏷️ Category page title (title tag)</h6>
+                                        <p>Título de la página para SEO (aparece en el navegador y buscadores)</p>
+                                        
+                                        <h6 class="mt-3">📄 Category description (description meta tag)</h6>
+                                        <p>Descripción optimizada para SEO (meta descripción que aparece en Google)</p>
+                                        
+                                        <h6 class="mt-3">📢 AdWords remarketing code</h6>
+                                        <p>Código opcional para remarketing de Google Ads (dejar vacío si no usas)</p>
+                                        
+                                        <h6 class="mt-3">🛍️ Lomadee campaign code</h6>
+                                        <p>Código opcional para campañas de afiliados (dejar vacío si no aplica)</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">4</span>
+                                        <strong>Configurar jerarquía</strong>
+                                        
+                                        <h6 class="mt-3">📂 Parent category (Categoría padre)</h6>
+                                        <p>Selecciona a qué categoría padre pertenece esta subcategoría</p>
+                                        <ul>
+                                            <li>Si es <strong>Departamento</strong> (nivel 1): Deja en blanco o selecciona "ninguna"</li>
+                                            <li>Si es <strong>Categoría</strong> (nivel 2): Selecciona el departamento</li>
+                                            <li>Si es <strong>Subcategoría</strong> (nivel 3): Selecciona la categoría</li>
+                                        </ul>
+                                        
+                                        <div class="example-card mt-3">
+                                            <h5>🌳 Ejemplo de jerarquía:</h5>
+                                            <p><strong>Nivel 1 (Departamento):</strong> Deportes</p>
+                                            <p style="margin-left: 20px;"><strong>Nivel 2 (Categoría):</strong> Calzado (Parent: Deportes)</p>
+                                            <p style="margin-left: 40px;"><strong>Nivel 3 (Subcategoría):</strong> Running (Parent: Calzado)</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">5</span>
+                                        <strong>Categoría global de VTEX</strong>
+                                        
+                                        <h6 class="mt-3">🌍 VTEX global category *</h6>
+                                        <p><em>Why complete the VTEX global category?</em></p>
+                                        <p>Selecciona el tipo de categoría del sistema global de VTEX si aplica. Ejemplo:</p>
+                                        <ul>
+                                            <li><strong>Combo Boxes:</strong> Productos que son combos o paquetes</li>
+                                            <li><strong>Radio Selection Icons:</strong> Productos con opciones de radio buttons</li>
+                                            <li><strong>SKU List:</strong> Productos con lista de SKUs</li>
+                                        </ul>
+                                        <p class="mt-2"><em>Si no aplica, puedes dejarlo en la opción por defecto</em></p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">6</span>
+                                        <strong>Opciones de visualización</strong>
+                                        
+                                        <div class="mt-3">
+                                            <p>☑️ <strong>Menu:</strong> La categoría aparece en el menú superior/lateral de la tienda</p>
+                                            <p>☑️ <strong>Active:</strong> La categoría está activa y visible en la tienda</p>
+                                            <p>☑️ <strong>Menu with active link:</strong> El enlace del menú es clicable</p>
+                                            <p>☑️ <strong>Brand filter:</strong> Habilita filtro por marca en esta categoría</p>
+                                            <p>☑️ <strong>Score (used for sorting the search):</strong> Prioridad de ordenamiento en búsquedas</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">7</span>
+                                        <strong>Modo de visualización de productos</strong>
+                                        
+                                        <h6 class="mt-3">📊 Product display mode</h6>
+                                        <p>Selecciona cómo se muestran los productos:</p>
+                                        <ul>
+                                            <li><strong>SKU List:</strong> Lista de SKUs (más recomendado)</li>
+                                            <li><strong>Combo Boxes:</strong> Selectores de combo</li>
+                                            <li><strong>Radio Buttons:</strong> Botones de opción</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">8</span>
+                                        <strong>Guardar categoría</strong>
+                                        <p class="mt-2">Haz clic en <strong>"Save"</strong> para crear la categoría</p>
+                                    </div>
+
+                                    <div class="example-card mt-4">
+                                        <h5><i class="bi bi-lightbulb-fill text-danger"></i> Recomendaciones tipos de categorías</h5>
+                                        
+                                        <h6 class="mt-3">1️⃣ SKU List (Lista de SKUs) - MÁS RECOMENDADO</h6>
+                                        <p>Muestra todos los SKUs bajo el producto. Recomendado para:</p>
+                                        <ul>
+                                            <li>✅ Ropa (tallas, colores)</li>
+                                            <li>✅ Zapatillas (tallas)</li>
+                                            <li>✅ Celulares (colores, capacidad)</li>
+                                            <li>✅ Computadoras</li>
+                                            <li>✅ Productos electrónicos</li>
+                                            <li>✅ Cualquier producto con variaciones</li>
+                                        </ul>
+                                        
+                                        <h6 class="mt-3">2️⃣ Combo Boxes (Selectores) - LO MÁS RECOMENDADO</h6>
+                                        <p>Muestra selectores como dropdowns. Recomendado para:</p>
+                                        <ul>
+                                            <li>✅ Ropa</li>
+                                            <li>✅ Zapatillas</li>
+                                            <li>✅ Celulares</li>
+                                        </ul>
+                                        
+                                        <h6 class="mt-3">3️⃣ Radio Selection Icons (Radio Box) - VISUAL</h6>
+                                        <p>Muestra opciones como botones visuales. Es bonito visualmente pero solo cuando hay:</p>
+                                        <ul>
+                                            <li>✅ Pocos colores</li>
+                                            <li>✅ Pocas tallas</li>
+                                            <li>✅ Pocas capacidades</li>
+                                        </ul>
+                                        
+                                        <h6 class="mt-3">4️⃣ Follows the definition of the SKU specification</h6>
+                                        <p>VTEX decide automáticamente. <strong>NO MUY RECOMENDADO</strong> porque no tienes control</p>
+                                    </div>
+
+                                    <div class="alert-custom mt-4">
+                                        <i class="bi bi-check-circle-fill"></i> <strong>¡Listo!</strong> Tu categoría ya está creada y lista para agregar productos.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Acordeón 8: Tutorial Marcas Detallado -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+                                    <i class="bi bi-award me-3"></i> 📚 Tutorial: Marcas paso a paso
+                                </button>
+                            </h2>
+                            <div id="collapseEight" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <h4><i class="bi bi-play-circle text-danger"></i> Tutorial completo de Marcas</h4>
+                                    
+                                    <div class="alert-custom">
+                                        <i class="bi bi-exclamation-triangle-fill"></i> <strong>IMPORTANTE:</strong> Antes de subir un producto, debes tener la marca agregada del producto. Si no tienes que registrar la marca y seleccionarla al producto para subirlo.
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">1</span>
+                                        <strong>Acceder al módulo de Marcas</strong>
+                                        <div class="code-block">Admin > Catálogo > Marcas (Brands)</div>
+                                        <p class="mt-2">Verás la lista de marcas existentes con sus IDs y estados (Active/Inactive)</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">2</span>
+                                        <strong>Crear nueva marca</strong>
+                                        <p class="mt-2">Haz clic en el botón <strong>"New Brand"</strong> (azul, esquina superior derecha)</p>
+                                        <p class="mt-2"><em>Si la marca ya existe, puedes hacer clic en "Edit" para modificarla</em></p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">3</span>
+                                        <strong>Formulario de marca - Campos</strong>
+                                        
+                                        <h6 class="mt-3">🏷️ Name (Nombre) *</h6>
+                                        <p><strong>Ejemplo:</strong> Samsung, Nike, Apple, Sony, etc.</p>
+                                        <p>Este es el nombre que aparecerá en la tienda</p>
+                                        
+                                        <h6 class="mt-3">🔤 Similar words (use words with the same meaning) *</h6>
+                                        <p>Palabras que alguien podría escribir para buscar esa marca:</p>
+                                        <div class="example-card">
+                                            <p><strong>Ejemplo para Samsung:</strong></p>
+                                            <p>samsung, samssung, samsnug, galaxy, samsung electronics, sam, smart samsung</p>
+                                        </div>
+                                        <div class="example-card mt-2">
+                                            <p><strong>Ejemplo para Calvin Klein:</strong></p>
+                                            <p>Electronic -> Electronics<br>Fridge -> Cooler<br>Calvin Klein -> Calvin Klaen</p>
+                                        </div>
+                                        <p class="mt-2"><em>Important: These words will be used for internal searches and with search engines</em></p>
+                                        
+                                        <h6 class="mt-3">📄 Brand description (description meta tag) *</h6>
+                                        <p>Descripción corta optimizada para SEO (aparece en Google):</p>
+                                        <div class="example-card">
+                                            <p><strong>Ejemplo Samsung:</strong></p>
+                                            <p>"Samsung es una marca líder en tecnología: smartphones Galaxy, televisores, tabletas, electrodomésticos y dispositivos inteligentes de alta calidad."</p>
+                                        </div>
+                                        
+                                        <h6 class="mt-3">🏷️ Brand page title (title tag)</h6>
+                                        <p>Título de la página (aparece en la pestaña del navegador)</p>
+                                        <div class="example-card">
+                                            <p><strong>Ejemplo:</strong> Samsung</p>
+                                        </div>
+                                        
+                                        <h6 class="mt-3">📢 AdWords remarketing code *</h6>
+                                        <p>(Dejar vacío si no usas Google Ads)</p>
+                                        <p>Código de remarketing de Google. Solo si tienes campañas configuradas.</p>
+                                        
+                                        <h6 class="mt-3">🛍️ Lomadee campaign code *</h6>
+                                        <p>(Dejar vacío si no usas afiliados)</p>
+                                        <p>Código para campañas de afiliados registradas en Lomadee con el scope y campaña correlacionada activa en VTEX.</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">4</span>
+                                        <strong>Configuración de visualización</strong>
+                                        
+                                        <h6 class="mt-3">⭐ Score (used for sorting the search)</h6>
+                                        <p>Este número define qué tan arriba aparece la marca en el filtro.</p>
+                                        <ul>
+                                            <li>✅ <strong>Recomiendo poner entre 5 y 10</strong> para marcas importantes</li>
+                                            <li>Número más alto = más prioridad en búsquedas</li>
+                                        </ul>
+                                        <div class="example-card">
+                                            <p><strong>Ejemplo:</strong> 10</p>
+                                        </div>
+                                        
+                                        <h6 class="mt-3">🏠 Display on home menu (Mostrar en el menú de inicio)</h6>
+                                        <p>☑️ Márcalo solo si quieres mostrar la marca en el menú principal</p>
+                                        <p>Útil para marcas destacadas que quieres promover</p>
+                                        
+                                        <h6 class="mt-3">✅ Activate Brand (Activar marca)</h6>
+                                        <p>☑️ <strong>Debes marcarlo siempre, si la marca estará activa</strong></p>
+                                        <p>Si no está marcado, la marca no aparecerá en la tienda</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">5</span>
+                                        <strong>Guardar marca</strong>
+                                        <p class="mt-2">Haz clic en <strong>"Save"</strong> para crear/actualizar la marca</p>
+                                        <p class="mt-2">Haz clic en <strong>"Back"</strong> si quieres cancelar</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">6</span>
+                                        <strong>Asignar marca al producto</strong>
+                                        <p class="mt-2">Una vez creada la marca, podrás seleccionarla cuando crees un producto:</p>
+                                        <div class="code-block">Catálogo > Productos y SKUs > Add Product<br>Brand: [Selecciona de la lista]</div>
+                                    </div>
+
+                                    <div class="example-card mt-4">
+                                        <h5><i class="bi bi-check-circle-fill text-success"></i> Checklist de marca</h5>
+                                        <ol>
+                                            <li>✅ Nombre de la marca ingresado</li>
+                                            <li>✅ Palabras similares agregadas</li>
+                                            <li>✅ Descripción SEO completa</li>
+                                            <li>✅ Score configurado (5-10)</li>
+                                            <li>✅ "Activate Brand" marcado</li>
+                                            <li>✅ Marca guardada correctamente</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="alert-custom mt-4">
+                                        <i class="bi bi-lightbulb-fill"></i> <strong>Tip:</strong> Crea todas las marcas de tus productos antes de empezar a cargar el catálogo.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Acordeón 9: Tutorial Precios -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
+                                    <i class="bi bi-cash-coin me-3"></i> 📚 Tutorial: Gestión de precios
+                                </button>
+                            </h2>
+                            <div id="collapseNine" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <h4><i class="bi bi-play-circle text-danger"></i> Tutorial completo de Precios</h4>
+                                    
+                                    <div class="step-item">
+                                        <span class="step-number">1</span>
+                                        <strong>Acceder a lista de precios</strong>
+                                        <div class="code-block">Admin > Catálogo > Price List</div>
+                                        <p class="mt-2">O directamente desde la vista de productos:</p>
+                                        <div class="code-block">Admin > Catálogo > Products & SKUs > Click en producto > Price List</div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">2</span>
+                                        <strong>Buscar el SKU</strong>
+                                        <p class="mt-2">En la vista Price List, busca el producto por:</p>
+                                        <ul>
+                                            <li>Nombre del producto</li>
+                                            <li>ID del SKU</li>
+                                            <li>Código de referencia</li>
+                                        </ul>
+                                        <p class="mt-2">Haz clic en el SKU para abrir el panel de precios</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">3</span>
+                                        <strong>Entender la estructura de precios</strong>
+                                        
+                                        <div class="example-card mt-3">
+                                            <h5><i class="bi bi-calculator-fill text-danger"></i> PRICE-LIST: Estructura de 3 niveles</h5>
+                                            
+                                            <h6 class="mt-3">1️⃣ COST-PRICE (Precio de costo)</h6>
+                                            <p>El costo que te cobra tu proveedor o costo de producción</p>
+                                            <div class="code-block">Ejemplo: 1,022.00</div>
+                                            <p><em>Este precio NO se muestra al cliente</em></p>
+                                            
+                                            <h6 class="mt-3">⬇️ + BASE-MARKUP (Porcentaje de ganancia)</h6>
+                                            <p>El margen de ganancia que quieres obtener (en porcentaje)</p>
+                                            <div class="code-block">Ejemplo: 48.18%</div>
+                                            <p><strong>Cálculo automático:</strong></p>
+                                            <p class="mt-1">COST-PRICE × (1 + BASE-MARKUP/100) = BASE-PRICE</p>
+                                            <p class="mt-1">1,022.00 × 1.4818 = 1,514.52</p>
+                                            
+                                            <h6 class="mt-3">⬇️ = BASE-PRICE (Precio base)</h6>
+                                            <p>El precio que aparece en tu tienda (precio de venta)</p>
+                                            <div class="code-block">Ejemplo: 1,529.22</div>
+                                            <p><em>Este es el precio que ve el cliente</em></p>
+                                        </div>
+
+                                        <div class="alert-custom mt-3">
+                                            <i class="bi bi-lightbulb-fill"></i> <strong>Con esto automáticamente se llenará y colocará el precio al producto</strong>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">4</span>
+                                        <strong>Configurar precio - Opción A (Recomendada)</strong>
+                                        <p class="mt-2"><strong>Ingresa COST-PRICE + BASE-MARKUP:</strong></p>
+                                        <ol>
+                                            <li>Ingresa el <strong>COST-PRICE</strong> (ej: 1022.00)</li>
+                                            <li>Ingresa el <strong>BASE-MARKUP</strong> porcentaje (ej: 48.18)</li>
+                                            <li>VTEX calculará automáticamente el <strong>BASE-PRICE</strong></li>
+                                            <li>Haz clic en "SET-LIST-PRICE"</li>
+                                        </ol>
+                                        <p class="mt-2"><strong>✅ Ventaja:</strong> El sistema calcula automáticamente tu ganancia</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">5</span>
+                                        <strong>Configurar precio - Opción B (Manual)</strong>
+                                        <p class="mt-2"><strong>Ingresa solo BASE-PRICE:</strong></p>
+                                        <ol>
+                                            <li>Deja COST-PRICE y BASE-MARKUP vacíos</li>
+                                            <li>Ingresa directamente el <strong>BASE-PRICE</strong> (precio final)</li>
+                                            <li>Haz clic en "SET-LIST-PRICE"</li>
+                                        </ol>
+                                        <p class="mt-2"><strong>⚠️ Nota:</strong> No tendrás control automático del margen de ganancia</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">6</span>
+                                        <strong>Precios adicionales (opcionales)</strong>
+                                        
+                                        <h6 class="mt-3">💰 List Price (Precio de lista/tachado)</h6>
+                                        <p>Precio "antes" que se muestra tachado para mostrar descuento</p>
+                                        <div class="code-block">Ej: $2,000.00 <del>$2,500.00</del> (Ahorra $500)</div>
+                                        
+                                        <h6 class="mt-3">🎯 Fixed Price (Precio fijo)</h6>
+                                        <p>Precio que ignora promociones y descuentos automáticos</p>
+                                        
+                                        <h6 class="mt-3">📅 Precio por fecha</h6>
+                                        <p>Puedes programar precios diferentes para fechas específicas (ej: Black Friday)</p>
+                                    </div>
+
+                                    <div class="example-card mt-4">
+                                        <h5><i class="bi bi-calculator text-danger"></i> Ejemplo práctico completo</h5>
+                                        <p><strong>Producto:</strong> Laptop Dell Inspiron 15</p>
+                                        <hr>
+                                        <p><strong>COST-PRICE:</strong> $800.00 (lo que te cuesta)</p>
+                                        <p><strong>BASE-MARKUP:</strong> 50% (tu ganancia deseada)</p>
+                                        <p><strong>Cálculo:</strong> $800 × 1.50 = $1,200</p>
+                                        <p><strong>BASE-PRICE:</strong> $1,200.00 (precio final al cliente)</p>
+                                        <hr>
+                                        <p><strong>Tu ganancia:</strong> $400.00 (50% del costo)</p>
+                                    </div>
+
+                                    <div class="example-card mt-3">
+                                        <h5><i class="bi bi-graph-up-arrow text-success"></i> Recomendaciones de markup por categoría</h5>
+                                        <ul>
+                                            <li><strong>Electrónica:</strong> 15-30% markup</li>
+                                            <li><strong>Ropa y moda:</strong> 50-100% markup</li>
+                                            <li><strong>Joyería:</strong> 100-300% markup</li>
+                                            <li><strong>Alimentos:</strong> 20-50% markup</li>
+                                            <li><strong>Libros:</strong> 20-40% markup</li>
+                                            <li><strong>Cosméticos:</strong> 50-100% markup</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="alert-custom mt-4">
+                                        <i class="bi bi-check-circle-fill"></i> <strong>¡Importante!</strong> Los precios se actualizan en tiempo real en la tienda después de guardar.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Acordeón 10: Tutorial Formulario Producto Completo -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen">
+                                    <i class="bi bi-file-earmark-text me-3"></i> 📚 Tutorial: Formulario de producto completo
+                                </button>
+                            </h2>
+                            <div id="collapseTen" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <h4><i class="bi bi-play-circle text-danger"></i> Guía completa del formulario de producto</h4>
+                                    
+                                    <div class="alert-custom">
+                                        <i class="bi bi-info-circle-fill"></i> <strong>Requisitos previos:</strong> Debes tener creadas las marcas y categorías antes de agregar productos.
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">1</span>
+                                        <strong>Acceder al formulario de producto</strong>
+                                        <div class="code-block">Admin > Catálogo > Products & SKUs > + Add Product</div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">2</span>
+                                        <strong>Navegación por pestañas</strong>
+                                        <p class="mt-2">El formulario tiene 2 pestañas principales:</p>
+                                        <ul>
+                                            <li><strong>Product:</strong> Información general del producto</li>
+                                            <li><strong>SKUs:</strong> Variantes específicas (se configura después)</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">3</span>
+                                        <strong>Secciones del formulario - Menú lateral</strong>
+                                        
+                                        <div class="example-card mt-3">
+                                            <h6>📋 Secciones disponibles:</h6>
+                                            <ul>
+                                                <li>⭕ <strong>Basic information:</strong> Datos básicos del producto</li>
+                                                <li>⭕ <strong>SEO:</strong> Optimización para buscadores</li>
+                                                <li>✅ <strong>Storefront:</strong> Cómo aparece en la tienda (seleccionada)</li>
+                                                <li>⭕ <strong>Identifiers:</strong> Códigos y referencias</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">4</span>
+                                        <strong>Completar información básica</strong>
+                                        
+                                        <h6 class="mt-3">📝 Product name * (Título = Product name)</h6>
+                                        <p>Nombre del producto que verán los clientes</p>
+                                        <div class="example-card">
+                                            <p><strong>Ejemplo:</strong> Zapatillas Nike Air Max 270</p>
+                                        </div>
+                                        <p class="mt-2"><strong>☑️ Active:</strong> Marca para activar el producto inmediatamente</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">5</span>
+                                        <strong>Sección: Basic information</strong>
+                                        
+                                        <h6 class="mt-3">📄 Description (Descripción general del producto = Description)</h6>
+                                        <p>Editor de texto enriquecido (HTML) para descripción detallada:</p>
+                                        <ul>
+                                            <li>Características principales</li>
+                                            <li>Materiales y composición</li>
+                                            <li>Instrucciones de uso/cuidado</li>
+                                            <li>Especificaciones técnicas</li>
+                                        </ul>
+                                        <div class="example-card mt-2">
+                                            <p><strong>Ejemplo:</strong></p>
+                                            <p>Las Zapatillas Nike Air Max 270 combinan comodidad excepcional con estilo moderno. Equipadas con la mayor unidad de Air visible en el talón hasta la fecha...</p>
+                                        </div>
+                                        
+                                        <p class="mt-3">☑️ <strong>Additional description:</strong> Descripción complementaria (opcional)</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">6</span>
+                                        <strong>Asignar Marca y Categoría</strong>
+                                        
+                                        <h6 class="mt-3">🏷️ Brand * (Marca = Brand)</h6>
+                                        <p>Selecciona de la lista desplegable la marca del producto</p>
+                                        <div class="example-card">
+                                            <p><strong>Ejemplo:</strong> Nike</p>
+                                        </div>
+                                        <p class="mt-2"><em>⚠️ Si la marca no aparece, debes crearla primero en Catálogo > Brands</em></p>
+                                        
+                                        <h6 class="mt-3">📂 Category * (Categoría = Category)</h6>
+                                        <p>Selecciona la categoría más específica donde pertenece el producto</p>
+                                        <div class="example-card">
+                                            <p><strong>Ejemplo:</strong> Deportes > Calzado > Running</p>
+                                        </div>
+                                        <p class="mt-2"><em>⚠️ Puedes seleccionar múltiples categorías si el producto aplica a varias</em></p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">7</span>
+                                        <strong>Sección: SEO (Opcional pero recomendado)</strong>
+                                        
+                                        <h6 class="mt-3">🔗 Page title (title tag)</h6>
+                                        <p>Título que aparece en Google y en la pestaña del navegador</p>
+                                        
+                                        <h6 class="mt-3">📄 Meta description</h6>
+                                        <p>Descripción breve para resultados de búsqueda (max 160 caracteres)</p>
+                                        
+                                        <h6 class="mt-3">🔤 URL slug</h6>
+                                        <p>URL amigable del producto (se genera automáticamente del nombre)</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">8</span>
+                                        <strong>Sección: Identifiers (Identificadores)</strong>
+                                        
+                                        <h6 class="mt-3">🔢 Ref ID</h6>
+                                        <p>Código de referencia interno (ID único de tu sistema)</p>
+                                        
+                                        <h6 class="mt-3">📊 Product ID</h6>
+                                        <p>VTEX lo genera automáticamente (no editable)</p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">9</span>
+                                        <strong>Guardar producto</strong>
+                                        <p class="mt-2">Haz clic en <strong>"Save"</strong> para crear el producto base</p>
+                                        <p class="mt-2"><em>Después de guardar podrás agregar SKUs, imágenes y especificaciones</em></p>
+                                    </div>
+
+                                    <div class="step-item">
+                                        <span class="step-number">10</span>
+                                        <strong>Siguiente paso: Crear SKUs</strong>
+                                        <p class="mt-2">Después de guardar el producto, ve a la pestaña <strong>"SKUs"</strong> para:</p>
+                                        <ul>
+                                            <li>Crear variantes (tallas, colores, capacidades)</li>
+                                            <li>Subir imágenes específicas de cada SKU</li>
+                                            <li>Configurar stock y peso/dimensiones</li>
+                                            <li>Asignar códigos EAN/UPC</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="example-card mt-4">
+                                        <h5><i class="bi bi-clipboard-check text-success"></i> Checklist antes de publicar</h5>
+                                        <ol>
+                                            <li>✅ Nombre del producto claro y descriptivo</li>
+                                            <li>✅ Marca seleccionada correctamente</li>
+                                            <li>✅ Categoría asignada (la más específica)</li>
+                                            <li>✅ Descripción completa y atractiva</li>
+                                            <li>✅ Producto marcado como "Active"</li>
+                                            <li>✅ Al menos 1 SKU creado</li>
+                                            <li>✅ Imágenes de alta calidad subidas</li>
+                                            <li>✅ Precio configurado en Price List</li>
+                                            <li>✅ Stock disponible</li>
+                                        </ol>
+                                    </div>
+
+                                    <div class="alert-custom mt-4">
+                                        <i class="bi bi-lightbulb-fill"></i> <strong>Tip:</strong> Usa nombres descriptivos que incluyan características clave (marca, modelo, especificación principal) para mejor SEO.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

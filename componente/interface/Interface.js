@@ -296,6 +296,223 @@ const previewContent = {
             <text x="280" y="350" font-family="Arial" font-size="10" fill="#28a745">✓ Envíos activos</text>
             <text x="430" y="350" font-family="Arial" font-size="10" fill="#ffc107">⚠ Emails pendientes</text>
         </svg>
+    `,
+    collapseSeven: `
+        <svg class="preview-image" viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg">
+            <!-- Tutorial Categorías -->
+            <rect x="50" y="20" width="500" height="410" rx="10" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+            
+            <text x="300" y="50" font-family="Arial" font-size="18" fill="#142032" text-anchor="middle" font-weight="bold">Crear Categoría</text>
+            
+            <!-- Form fields -->
+            <text x="70" y="80" font-family="Arial" font-size="11" fill="#727273">Name * (Nombre)</text>
+            <rect x="70" y="85" width="460" height="25" rx="5" fill="#f8f9fa" stroke="#e0e0e0"/>
+            <text x="80" y="102" font-family="Arial" font-size="10" fill="#999">Deportes</text>
+            
+            <text x="70" y="125" font-family="Arial" font-size="11" fill="#727273">Similar words (Palabras relacionadas)</text>
+            <rect x="70" y="130" width="460" height="25" rx="5" fill="#f8f9fa" stroke="#e0e0e0"/>
+            <text x="80" y="147" font-family="Arial" font-size="9" fill="#999">sports, atletismo, fitness, ejercicio</text>
+            
+            <text x="70" y="170" font-family="Arial" font-size="11" fill="#727273">Parent category (Categoría padre)</text>
+            <rect x="70" y="175" width="220" height="25" rx="5" fill="#fff5f8" stroke="#F71963"/>
+            <text x="80" y="192" font-family="Arial" font-size="10" fill="#F71963">Ninguna (es nivel 1)</text>
+            
+            <text x="310" y="170" font-family="Arial" font-size="11" fill="#727273">VTEX global category</text>
+            <rect x="310" y="175" width="220" height="25" rx="5" fill="#f0f8ff" stroke="#142032"/>
+            <text x="320" y="192" font-family="Arial" font-size="10" fill="#142032">SKU List</text>
+            
+            <!-- Actions menu -->
+            <rect x="70" y="220" width="460" height="100" rx="8" fill="#e8f5e9" stroke="#28a745" stroke-width="2"/>
+            <text x="300" y="245" font-family="Arial" font-size="12" fill="#142032" text-anchor="middle" font-weight="bold">TAGEGORIES ACTIONS</text>
+            <rect x="90" y="255" width="100" height="20" rx="3" fill="#ffffff"/>
+            <text x="140" y="269" font-family="Arial" font-size="9" fill="#727273" text-anchor="middle">✏️ Edit</text>
+            <rect x="200" y="255" width="100" height="20" rx="3" fill="#ffffff"/>
+            <text x="250" y="269" font-family="Arial" font-size="9" fill="#727273" text-anchor="middle">📁 Include</text>
+            <rect x="310" y="255" width="100" height="20" rx="3" fill="#ffffff"/>
+            <text x="360" y="269" font-family="Arial" font-size="9" fill="#727273" text-anchor="middle">👥 Group</text>
+            <rect x="420" y="255" width="100" height="20" rx="3" fill="#ffffff"/>
+            <text x="470" y="269" font-family="Arial" font-size="9" fill="#727273" text-anchor="middle">🏷️ Field</text>
+            <rect x="145" y="285" width="100" height="20" rx="3" fill="#ffffff"/>
+            <text x="195" y="299" font-family="Arial" font-size="9" fill="#727273" text-anchor="middle">💰 Price range</text>
+            <rect x="255" y="285" width="100" height="20" rx="3" fill="#ffffff"/>
+            <text x="305" y="299" font-family="Arial" font-size="9" fill="#727273" text-anchor="middle">📦 Field [SKU]</text>
+            
+            <!-- Checkboxes -->
+            <rect x="70" y="340" width="220" height="70" rx="5" fill="#fff8e1" stroke="#ffc107"/>
+            <text x="80" y="360" font-family="Arial" font-size="10" fill="#142032">☑ Menu</text>
+            <text x="80" y="380" font-family="Arial" font-size="10" fill="#142032">☑ Active</text>
+            <text x="80" y="400" font-family="Arial" font-size="10" fill="#142032">☑ Menu with active link</text>
+            
+            <rect x="310" y="340" width="220" height="70" rx="5" fill="#fce4ec" stroke="#F71963"/>
+            <text x="320" y="360" font-family="Arial" font-size="10" fill="#142032">☑ Brand filter</text>
+            <text x="320" y="380" font-family="Arial" font-size="10" fill="#142032">Display mode:</text>
+            <text x="320" y="400" font-family="Arial" font-size="9" fill="#F71963" font-weight="bold">✓ SKU List (Recomendado)</text>
+            
+            <!-- Buttons -->
+            <rect x="360" y="415" width="80" height="25" rx="5" fill="#727273"/>
+            <text x="400" y="432" font-family="Arial" font-size="11" fill="#ffffff" text-anchor="middle">Back</text>
+            <rect x="450" y="415" width="80" height="25" rx="5" fill="#28a745"/>
+            <text x="490" y="432" font-family="Arial" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">Save</text>
+        </svg>
+    `,
+    collapseEight: `
+        <svg class="preview-image" viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg">
+            <!-- Tutorial Marcas -->
+            <rect x="50" y="20" width="500" height="410" rx="10" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+            
+            <text x="300" y="50" font-family="Arial" font-size="18" fill="#142032" text-anchor="middle" font-weight="bold">Add Brand / Crear Marca</text>
+            
+            <!-- Name -->
+            <text x="70" y="80" font-family="Arial" font-size="11" fill="#727273">Name (Nombre) *</text>
+            <rect x="70" y="85" width="460" height="25" rx="5" fill="#f8f9fa" stroke="#e0e0e0"/>
+            <text x="80" y="102" font-family="Arial" font-size="10" fill="#142032" font-weight="bold">Samsung</text>
+            
+            <!-- Similar words -->
+            <text x="70" y="125" font-family="Arial" font-size="11" fill="#727273">Similar words (use words with the same meaning) *</text>
+            <rect x="70" y="130" width="460" height="40" rx="5" fill="#fff5f8" stroke="#F71963"/>
+            <text x="80" y="147" font-family="Arial" font-size="9" fill="#999">samsung, samssung, samsnug, galaxy,</text>
+            <text x="80" y="160" font-family="Arial" font-size="9" fill="#999">samsung electronics, sam, smart samsung</text>
+            
+            <!-- Brand description -->
+            <text x="70" y="185" font-family="Arial" font-size="11" fill="#727273">Brand description (description meta tag) *</text>
+            <rect x="70" y="190" width="460" height="50" rx="5" fill="#f8f9fa" stroke="#e0e0e0"/>
+            <text x="80" y="207" font-family="Arial" font-size="9" fill="#999">Samsung es una marca líder en tecnología:</text>
+            <text x="80" y="220" font-family="Arial" font-size="9" fill="#999">smartphones Galaxy, televisores, tabletas...</text>
+            
+            <!-- Brand page title -->
+            <text x="70" y="255" font-family="Arial" font-size="11" fill="#727273">Brand page title (title tag)</text>
+            <rect x="70" y="260" width="220" height="25" rx="5" fill="#f8f9fa" stroke="#e0e0e0"/>
+            <text x="80" y="277" font-family="Arial" font-size="10" fill="#999">Samsung</text>
+            
+            <!-- Score -->
+            <text x="310" y="255" font-family="Arial" font-size="11" fill="#727273">Score (sorting search) *</text>
+            <rect x="310" y="260" width="220" height="25" rx="5" fill="#f0f8ff" stroke="#142032"/>
+            <text x="320" y="277" font-family="Arial" font-size="10" fill="#142032" font-weight="bold">10</text>
+            
+            <!-- AdWords & Lomadee -->
+            <text x="70" y="300" font-family="Arial" font-size="11" fill="#727273">AdWords remarketing code</text>
+            <rect x="70" y="305" width="220" height="25" rx="5" fill="#f8f9fa" stroke="#e0e0e0"/>
+            <text x="80" y="322" font-family="Arial" font-size="9" fill="#ccc">(Dejar vacío)</text>
+            
+            <text x="310" y="300" font-family="Arial" font-size="11" fill="#727273">Lomadee campaign code</text>
+            <rect x="310" y="305" width="220" height="25" rx="5" fill="#f8f9fa" stroke="#e0e0e0"/>
+            <text x="320" y="322" font-family="Arial" font-size="9" fill="#ccc">(Dejar vacío)</text>
+            
+            <!-- Checkboxes -->
+            <rect x="70" y="350" width="460" height="50" rx="8" fill="#e8f5e9" stroke="#28a745" stroke-width="2"/>
+            <text x="80" y="370" font-family="Arial" font-size="11" fill="#142032">☑ Display on home menu (Mostrar en menú)</text>
+            <text x="80" y="390" font-family="Arial" font-size="11" fill="#28a745" font-weight="bold">☑ Activate Brand (Activar marca) ← IMPORTANTE</text>
+            
+            <!-- Buttons -->
+            <rect x="360" y="405" width="80" height="25" rx="5" fill="#727273"/>
+            <text x="400" y="422" font-family="Arial" font-size="11" fill="#ffffff" text-anchor="middle">Back</text>
+            <rect x="450" y="405" width="80" height="25" rx="5" fill="#28a745"/>
+            <text x="490" y="422" font-family="Arial" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">Save</text>
+        </svg>
+    `,
+    collapseNine: `
+        <svg class="preview-image" viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg">
+            <!-- Tutorial Precios -->
+            <rect x="50" y="30" width="500" height="390" rx="10" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+            
+            <text x="300" y="60" font-family="Arial" font-size="18" fill="#142032" text-anchor="middle" font-weight="bold">PRICE-LIST: SKU Example</text>
+            
+            <!-- Cost Price -->
+            <rect x="150" y="90" width="300" height="80" rx="10" fill="#fff8e1" stroke="#ffc107" stroke-width="2"/>
+            <text x="300" y="115" font-family="Arial" font-size="14" fill="#142032" text-anchor="middle" font-weight="bold">PRICE-LIST COST-PRICE</text>
+            <rect x="200" y="130" width="200" height="30" rx="5" fill="#ffffff"/>
+            <text x="300" y="152" font-family="Arial" font-size="16" fill="#142032" text-anchor="middle" font-weight="bold">1,022.00</text>
+            
+            <!-- Arrow down -->
+            <path d="M 300 175 L 300 195" stroke="#727273" stroke-width="3" fill="none"/>
+            <polygon points="300,195 295,185 305,185" fill="#727273"/>
+            <text x="330" y="190" font-family="Arial" font-size="11" fill="#727273">+ Markup</text>
+            
+            <!-- Base Markup -->
+            <rect x="150" y="200" width="300" height="80" rx="10" fill="#f0f8ff" stroke="#142032" stroke-width="2"/>
+            <text x="300" y="225" font-family="Arial" font-size="14" fill="#142032" text-anchor="middle" font-weight="bold">PRICE-LIST BASE-MARKUP</text>
+            <rect x="200" y="240" width="200" height="30" rx="5" fill="#ffffff"/>
+            <text x="220" y="262" font-family="Arial" font-size="16" fill="#142032" font-weight="bold">48.18</text>
+            <text x="320" y="262" font-family="Arial" font-size="14" fill="#727273">%</text>
+            
+            <!-- Arrow down -->
+            <path d="M 300 285 L 300 305" stroke="#727273" stroke-width="3" fill="none"/>
+            <polygon points="300,305 295,295 305,295" fill="#727273"/>
+            <text x="330" y="300" font-family="Arial" font-size="11" fill="#727273">= Resultado</text>
+            
+            <!-- Base Price -->
+            <rect x="150" y="310" width="300" height="80" rx="10" fill="#e8f5e9" stroke="#28a745" stroke-width="3"/>
+            <text x="300" y="335" font-family="Arial" font-size="14" fill="#142032" text-anchor="middle" font-weight="bold">PRICE-LIST BASE-PRICE</text>
+            <rect x="200" y="350" width="200" height="30" rx="5" fill="#ffffff"/>
+            <text x="300" y="372" font-family="Arial" font-size="18" fill="#28a745" text-anchor="middle" font-weight="bold">1,529.22</text>
+            
+            <!-- Formula -->
+            <rect x="70" y="400" width="460" height="18" rx="5" fill="#fce4ec"/>
+            <text x="300" y="413" font-family="monospace" font-size="10" fill="#142032" text-anchor="middle">1,022 × (1 + 0.4818) = 1,529.22 ← Precio final al cliente</text>
+        </svg>
+    `,
+    collapseTen: `
+        <svg class="preview-image" viewBox="0 0 600 450" xmlns="http://www.w3.org/2000/svg">
+            <!-- Tutorial Producto Form -->
+            <rect x="30" y="20" width="540" height="410" rx="10" fill="#ffffff" stroke="#e0e0e0" stroke-width="2"/>
+            
+            <!-- Tabs -->
+            <rect x="30" y="20" width="100" height="35" rx="10" fill="#F71963"/>
+            <text x="80" y="43" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">Product</text>
+            <rect x="130" y="20" width="100" height="35" rx="10" fill="#f8f9fa"/>
+            <text x="180" y="43" font-family="Arial" font-size="12" fill="#727273" text-anchor="middle">SKUs</text>
+            
+            <!-- Sidebar menu -->
+            <rect x="40" y="65" width="130" height="350" rx="5" fill="#f8f9fa"/>
+            <text x="105" y="85" font-family="Arial" font-size="11" fill="#727273" text-anchor="middle">⭕ Basic information</text>
+            <text x="105" y="110" font-family="Arial" font-size="11" fill="#727273" text-anchor="middle">⭕ SEO</text>
+            <rect x="45" y="120" width="120" height="20" rx="5" fill="#F71963"/>
+            <text x="105" y="135" font-family="Arial" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">✅ Storefront</text>
+            <text x="105" y="160" font-family="Arial" font-size="11" fill="#727273" text-anchor="middle">⭕ Identifiers</text>
+            
+            <!-- Main form -->
+            <text x="190" y="85" font-family="Arial" font-size="14" fill="#142032" font-weight="bold">Basic information</text>
+            <text x="540" y="85" font-family="Arial" font-size="10" fill="#28a745">☑ Active</text>
+            
+            <!-- Product name -->
+            <text x="190" y="110" font-family="Arial" font-size="10" fill="#727273">Product name * (Título = Product name)</text>
+            <rect x="190" y="115" width="370" height="25" rx="5" fill="#f8f9fa" stroke="#e0e0e0"/>
+            <text x="200" y="132" font-family="Arial" font-size="10" fill="#142032" font-weight="bold">Zapatillas Nike Air Max 270</text>
+            
+            <!-- Description -->
+            <text x="190" y="155" font-family="Arial" font-size="10" fill="#727273">Description (Descripción general = Description)</text>
+            <rect x="190" y="160" width="370" height="60" rx="5" fill="#f8f9fa" stroke="#e0e0e0"/>
+            <text x="200" y="177" font-family="Arial" font-size="9" fill="#999">Las Zapatillas Nike Air Max 270 combinan</text>
+            <text x="200" y="190" font-family="Arial" font-size="9" fill="#999">comodidad excepcional con estilo moderno...</text>
+            <text x="200" y="210" font-family="Arial" font-size="8" fill="#ccc">☑ Additional description</text>
+            
+            <!-- Brand -->
+            <text x="190" y="240" font-family="Arial" font-size="10" fill="#727273">Brand * (Marca = Brand)</text>
+            <rect x="190" y="245" width="175" height="25" rx="5" fill="#fff5f8" stroke="#F71963" stroke-width="2"/>
+            <text x="200" y="262" font-family="Arial" font-size="10" fill="#F71963" font-weight="bold">Nike</text>
+            
+            <!-- Category -->
+            <text x="385" y="240" font-family="Arial" font-size="10" fill="#727273">Category * (Categoría = Category)</text>
+            <rect x="385" y="245" width="175" height="25" rx="5" fill="#f0f8ff" stroke="#142032" stroke-width="2"/>
+            <text x="395" y="262" font-family="Arial" font-size="9" fill="#142032" font-weight="bold">Deportes > Calzado > Running</text>
+            
+            <!-- Info boxes -->
+            <rect x="190" y="290" width="370" height="80" rx="8" fill="#e8f5e9" stroke="#28a745" stroke-width="2"/>
+            <text x="375" y="315" font-family="Arial" font-size="12" fill="#142032" text-anchor="middle" font-weight="bold">Checklist antes de publicar</text>
+            <text x="200" y="335" font-family="Arial" font-size="9" fill="#28a745">✅ Nombre descriptivo</text>
+            <text x="200" y="350" font-family="Arial" font-size="9" fill="#28a745">✅ Marca seleccionada</text>
+            <text x="200" y="365" font-family="Arial" font-size="9" fill="#28a745">✅ Categoría asignada</text>
+            <text x="390" y="335" font-family="Arial" font-size="9" fill="#ffc107">⏳ Falta crear SKUs</text>
+            <text x="390" y="350" font-family="Arial" font-size="9" fill="#ffc107">⏳ Falta subir imágenes</text>
+            <text x="390" y="365" font-family="Arial" font-size="9" fill="#ffc107">⏳ Falta configurar precio</text>
+            
+            <!-- Buttons -->
+            <rect x="390" y="385" width="80" height="30" rx="8" fill="#727273"/>
+            <text x="430" y="405" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle">Cancel</text>
+            
+            <rect x="480" y="385" width="80" height="30" rx="8" fill="#28a745"/>
+            <text x="520" y="405" font-family="Arial" font-size="12" fill="#ffffff" text-anchor="middle" font-weight="bold">Save</text>
+        </svg>
     `
 };
 
