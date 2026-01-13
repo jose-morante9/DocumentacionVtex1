@@ -1,4 +1,3 @@
-// Contenido para cada sección
 const previewContent = {
     collapseOne: `
         <svg class="preview-image" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
@@ -175,7 +174,6 @@ const previewContent = {
     `
 };
 
-// Función para actualizar el preview
 function updatePreview(collapseId) {
     const previewContainer = document.querySelector('.preview-content');
     if (previewContent[collapseId]) {
@@ -183,7 +181,6 @@ function updatePreview(collapseId) {
     }
 }
 
-// Escuchar cambios en los acordeones
 document.addEventListener('DOMContentLoaded', function() {
     const accordionItems = document.querySelectorAll('.accordion-collapse');
     

@@ -1,4 +1,3 @@
-// Agregar efecto de clic con ondas
 document.querySelectorAll('.btn').forEach(button => {
     button.addEventListener('click', function(e) {
         let ripple = document.createElement('span');
@@ -11,7 +10,6 @@ document.querySelectorAll('.btn').forEach(button => {
     });
 });
 
-// Animación del estudiante cuando se hace hover
 const studentSvg = document.querySelector('.student-svg');
 studentSvg.addEventListener('mouseenter', function() {
     this.style.transform = 'scale(1.1) rotate(5deg)';
